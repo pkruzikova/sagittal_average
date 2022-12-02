@@ -1,5 +1,5 @@
 import numpy as np
-from ..sagittal_brain import run_averages
+from sagittal_average.sagittal_brain import run_averages
 #import subprocess
 from pathlib import Path
 
