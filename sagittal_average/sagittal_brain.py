@@ -1,7 +1,7 @@
 import numpy as np
 
 
-#def run_averages(file_input='brain_sample.csv', file_output='brain_average.csv'):
+# def run_averages(file_input='brain_sample.csv', file_output='brain_average.csv'):
 def run_averages(file_input, file_output):
     """
     Calculates the average through the coronal planes
@@ -11,11 +11,11 @@ def run_averages(file_input, file_output):
     The result is the average for each sagittal/horizontal plane (rows)
     """
     # Open the file to analyse
-    planes = np.loadtxt(file_input, dtype=int,  delimiter=',')
+    planes = np.loadtxt(file_input, dtype=int, delimiter=",")
 
     # Calculates the averages through the sagittal/horizontal planes
     # and makes it as a row vector
     averages = planes.mean(axis=1)[np.newaxis, :]
 
     # write it out on my file
-    np.savetxt(file_output, averages, fmt='%.1f', delimiter=',')
+    np.savetxt(file_output, averages, fmt="%.1f", delimiter=",")
